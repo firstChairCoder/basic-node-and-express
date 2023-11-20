@@ -4,6 +4,7 @@ let app = express();
 console.log("Hello World");
 
 let absPath = __dirname + '/views/index.html';
+let midPath = __dirname + '/public'
 
 
 app.get("/", (req, res) => {
@@ -13,7 +14,7 @@ app.get("/", (req, res) => {
 
 
 
-
+app.use("/public", express.static(midPath));
 
 
 
