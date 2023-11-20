@@ -16,7 +16,9 @@ app.get("/", (req, res) => {
 
 app.use("/public", express.static(midPath));
 
-
+app.get("/json", (req, res) => {
+	res.json({"message": "Hello json"})
+});
 
 
 
